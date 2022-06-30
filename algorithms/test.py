@@ -30,8 +30,8 @@
 
 import os
 from random import randint
-for i in range(1, 15):
-    for j in range(1, randint(0, 10)):
+for i in range(300, 400):
+    for j in range(1, randint(0, 3)):
         d = str(i)+"days ago"
         with open("file.txt", 'a') as f:
             f.write(d)
