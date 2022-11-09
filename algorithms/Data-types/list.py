@@ -5,3 +5,13 @@ for i in range(3):
     t.append(max(l)) if max(l) not in t else t
     l.remove(max(l))
 print(t)
+first,second, third=l[0],min,min
+
+for i in range(len(l)):
+    if l[i]>firts:
+        third=second
+        second=first
+        first=a[i]
+
+
+

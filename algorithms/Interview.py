@@ -9,21 +9,21 @@ Input: n = 10
 Output: 10, 5, 0, 5, 10
 '''
 
-# n=10
-#
-# s=True
-# l=[n]
-# c=0
-# while s:
-#     n=n-5
-#     l.append(n)
-#     c=c+1
-#     if n<=0:
-#         for i in range (c):
-#             n=n+5
-#             l.append(n)
-#         s=False
-# print(l)
+n=10
+
+s=True
+l=[n]
+c=0
+while s:
+    n=n-5
+    l.append(n)
+    c=c+1
+    if n<=0:
+        for i in range (c):
+            n=n+5
+            l.append(n)
+        s=False
+print(l)
 #
 # # write your code here
 #
@@ -114,10 +114,10 @@ def find_number_divisble_by_fifteen(i):
             return i
         else:
             i=i-1
-str1=sys.argv[1]
-new_list = Convert(str1)
-remove_omitted_zero(l=new_list)
-new_list.sort(reverse=True)
-i =int("".join(new_list))
-print(find_number_divisble_by_fifteen(i))
+# str1=sys.argv[1]
+# new_list = Convert(str1)
+# remove_omitted_zero(l=new_list)
+# new_list.sort(reverse=True)
+# i =int("".join(new_list))
+# print(find_number_divisble_by_fifteen(i))
 

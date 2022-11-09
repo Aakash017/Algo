@@ -62,10 +62,10 @@ def find_permutations(s):
         print(s)
 
 
-# find_permutations("ABC")
+find_permutations("ABC")
 
-s="ABC"
-s=list(s)
+s = "ABC"
+s = list(s)
 print(s[1::])
 print(s[1::-1])
 

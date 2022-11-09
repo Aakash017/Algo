@@ -12,5 +12,6 @@ for i in range(1, 101):
         c5 = 0
     if d:
         print(d)
-    else:
-        print(i)
+    #     pass
+    # else:
+    #     print(i)

@@ -584,7 +584,7 @@ print(list(c))
 def find_sub_sets(s):
     result = []
     for i in range(len(s)+1):
-        for j in range(i)   :
+        for j in range(i):
             result.append(s[j:i])
     print(result)
 

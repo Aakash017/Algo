@@ -16,7 +16,7 @@ def tapp_rain_water(arr):
         for j in range(i + 1, len(arr)):
             right_max = max(right_max, arr[j])
         w = w + min(left_max, right_max) - arr[i]
-    print w
+    print (w)
 
 
 tapp_rain_water(l)
@@ -50,4 +50,4 @@ def tapp_rain_water_optimised(arr):
     return water
 
 
-print tapp_rain_water_optimised(l)
+print (tapp_rain_water_optimised(l))

@@ -36,3 +36,23 @@ fourth_node.next = fifth_node
 l.print_linked_list()
 l.add_node_at_tail(6)
 l.print_linked_list()
+
+n1 = Node(1)
+tmp = n1
+n2 = Node(2)
+tmp.next = n2
+tmp = n2
+n3 = Node(3)
+tmp.next = n3
+
+nodes = [1, 2, 3, 4, 5]
+print("-----------------")
+for i in range(len(nodes)):
+    node = Node(nodes[i])
+    tmp = node
+    tmp.next
+    if i != 0:
+        tmp.next = node
+        tmp=Node(nodes[i])
+    print(tmp.data, "->", tmp.next)
+

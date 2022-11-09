@@ -1,6 +1,5 @@
 def find_next_greateset_elemt(nums):
     temp = [-1 for i in nums]
-    print(temp)
     stack = []
     lnums = nums * 2
     N = len(nums)
@@ -17,4 +16,5 @@ def find_next_greateset_elemt(nums):
     return temp
 
 
-print(find_next_greateset_elemt([5, 4, 3, 2, 1]))
+#print(find_next_greateset_elemt([5, 4, 3, 2, 1]))
+print(find_next_greateset_elemt([4, 5, 2, 25]))
