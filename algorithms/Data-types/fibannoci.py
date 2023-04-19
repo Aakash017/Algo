@@ -16,6 +16,8 @@ def fibannoci(n):
     s[n] = value
     yield value
 
+
 import sys
+
 for i in range(1, 10101010):
     print(i, " : ", next(fibannoci(i)), "sizer", sys.getsizeof(fibannoci(i)))

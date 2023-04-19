@@ -1,7 +1,7 @@
 import time
 from functools import lru_cache
 
-n = 999999
+n = 99
 
 
 @lru_cache(maxsize=n)

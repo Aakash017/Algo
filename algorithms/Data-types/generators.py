@@ -41,10 +41,17 @@ def find_sum_upto(n):
 
 
 start_time=datetime.datetime.now()
-sum = find_sum_upto(100000000)
-# sum = find_sum_upto_using_gen(100000000)
+# sum = find_sum_upto(100000000)
+sum = find_sum_upto_using_gen(100000000)
 print(sum)
-# print(sum.__next__())
-end_time=datetime.datetime.now()
+print(sum.__next__())
+end_time = datetime.datetime.now()
 
-print("total time ", end_time-start_time)
+print("total time taken for gen funcion ", end_time-start_time)
+
+
+start_time = datetime.datetime.now()
+sum = find_sum_upto(100000000)
+end_time=datetime.datetime.now()
+print(sum)
+print("total time taken for normal funcion ", end_time-start_time)
