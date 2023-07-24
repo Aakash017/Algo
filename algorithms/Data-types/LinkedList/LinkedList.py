@@ -172,37 +172,25 @@ class LinkedList:
         Partition Linked List such as all elements less than z will be on right side and all elemts greater
          than x will be on left side
         """
-        left_node = Node(None)
-        right_node = Node(None)
-
+        left_ll = LinkedList(None)
+        right_ll = LinkedList(None)
         tmp = self.head
         while tmp:
-            if tmp.val <= x:
-                curr = tmp
-                next = tmp.next
-                curr = next
-                # # left_node=next
-                # # left_node.next = None
-                # left_node = left_node.next
-
+            if tmp.val < x:
+                tmpnode = Node(tmp.val)
+                tmpnode.next = left_ll.head
+                left_ll.head = tmpnode
             else:
-                right_node = tmp
-                # right_node.next = None
-                right_node = right_node.next
-                # if not right_ll.head:
-                #     right_ll.head = tmp
-                #     right_ll.head.next=None
-                #     next=right_ll.head.next
-                # else:
-                #     next = tmp
-                #     # tmp.next=None
-                #     next=tmp.next
+                tmpnode = Node(tmp.val)
+                tmpnode.next = right_ll.head
+                right_ll.head = tmpnode
             tmp = tmp.next
-        # left_ll.head.next = right_ll.head
-        print("LL")
-        # left_ll.print_linked_list()
-        # right_ll.print_linked_list()
-        # return left_ll
+        l = left_ll.head
+        while l.next:
+            l = l.next
+        l.next = right_ll.head
+        left_ll.print_linked_list()
+        return left_ll
 
 
 l1 = Node(3)
@@ -218,14 +206,14 @@ l4.next = l5
 l6 = Node(9)
 l5.next = l6
 
-l.print_linked_list()
+# l.print_linked_list()
 new_node = Node(10)
 l.add_node_at_last(new_node)
-l.print_linked_list()
+# l.print_linked_list()
 
 l.add_node_at_start(Node(1))
 
-l.print_linked_list()
+# l.print_linked_list()
 
 l.add_node_at_after_given_node(Node(8), l6)
 
@@ -237,7 +225,7 @@ print(l.get(3))
 
 l.set(6, 8)
 l.set(7, 9)
-# l.set(8,11)
+l.set(8, 11)
 # l.pop_first()
 l.print_linked_list()
 # d = l.pop_first()
@@ -247,22 +235,27 @@ l.print_linked_list()
 # print("poped", c.val)
 # l.remove(3)
 
-l.print_linked_list()
+# l.print_linked_list()
 
 # l.delete_all()
 # l.print_linked_list()
 
-print("reverse...")
-l.reverse()
-print("reverse complete")
+# print("reverse...")
+# l.reverse()
+# print("reverse complete")
 
-l.print_linked_list()
-l.remove_duplicates()
-l.print_linked_list()
+# l.print_linked_list()
+# l.remove_duplicates()
+# l.print_linked_list()
 
 print("return fom last")
-print(l.return_from_last(1))
-l.partition(3)
+# print(l.return_from_last(1))
+print("after partition")
+result = l.partition(5)
+result.print_linked_list()
+
+
+# l.print_linked_list()
 
 # Normal List Partition
 
@@ -278,3 +271,15 @@ l.partition(3)
 #         d.insert(r, d.pop(i))
 #         r -= 1
 # print(d)
+
+
+def add_two_linkedlist(l1, l2):
+    pass
+
+
+l1 = Node(5)
+l2 = l1
+print(l1 == l2)
+
+l1 = [2, 3, 4, 5]
+l2 = [1, 7, 2]
