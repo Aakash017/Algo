@@ -39,28 +39,28 @@ for i in range(300, 400):
         os.system('git commit --date="' + d + '" -m "commit"')
 os.system('git push origin master')
 
-l = [1, 9, 5, 3, 8, 23, 10]
-
-for i in range(len(l)):
-    for j in range(i + 1, len(l)):
-        if l[i] > l[j]:
-            l[i], l[j] = l[j], l[i]
-print(l)
-
-_l, _r = 0, len(l) - 1
-while _l < _r:
-    m = (_l + _r) // 2
-    if l[m] == 10:
-        print("index = ", m)
-        _l += 1
-        _r -= 1
-    elif l[m] > 10:
-        _r = m - 1
-    else:
-        _l = m + 1
-
-a = (0 + 5) / 2
-print("a", a)
+# l = [1, 9, 5, 3, 8, 23, 10]
+#
+# for i in range(len(l)):
+#     for j in range(i + 1, len(l)):
+#         if l[i] > l[j]:
+#             l[i], l[j] = l[j], l[i]
+# print(l)
+#
+# _l, _r = 0, len(l) - 1
+# while _l < _r:
+#     m = (_l + _r) // 2
+#     if l[m] == 10:
+#         print("index = ", m)
+#         _l += 1
+#         _r -= 1
+#     elif l[m] > 10:
+#         _r = m - 1
+#     else:
+#         _l = m + 1
+#
+# a = (0 + 5) / 2
+# print("a", a)
 
 
 s = "{({[}{{{[[))("
