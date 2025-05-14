@@ -1,0 +1,40 @@
+import threading
+
+class MyClass:
+    def __init__(self, n):
+        self.n = n
+        self.lock_zing = threading.Lock()
+        self.lock_zang = threading.Lock()
+        # Initially, we unlock 'zing' and lock 'zang' so the zing thread can start first
+        # self.lock_zing.acquire()  # Initially lock zing to let zang start first
+        # self.lock_zang.acquire()  # Lock zang to make sure zing starts first
+
+    def zing(self):
+        for _ in range(self.n):
+            # self.lock_zing.acquire()  # Wait for the turn to execute zing()
+            print("zing", end="")
+            # self.lock_zang.release()  # Allow the zang thread to run next
+
+    def zang(self):
+        for _ in range(self.n):
+            # self.lock_zang.acquire()  # Wait for the turn to execute zang()
+            print("zang", end="")
+            # self.lock_zing.release()  # Allow the zing thread to run next
+
+
+# Driver code to run threads
+if __name__ == "__main__":
+    n = 5  # Input for how many times to call each function
+    obj = MyClass(n)
+
+    # Create two threads: one for zing and one for zang
+    thread_zing = threading.Thread(target=obj.zing)
+    thread_zang = threading.Thread(target=obj.zang)
+
+    # Start the threads
+    thread_zing.start()
+    thread_zang.start()
+
+    # Wait for both threads to finish
+    thread_zing.join()
+    thread_zang.join()
